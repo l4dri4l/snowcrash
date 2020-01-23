@@ -1,0 +1,18 @@
+level13 binary only gives the flag if we have GUID 4242.
+
+There's two methods to break trough this. First we can create a false `getuid` library and LD_PRELOAD it before running the program :
+
+    gcc adrien.c -shared -o virus.so
+    LD_PRELOAD=virus.so level13
+
+or, with ghidra, we can get the full clear code of the program.
+In the main we see :
+    
+    ft_des("boe]!ai0FB@.:|L6l@A?>qJ}I");
+
+We can also see the code a `ft_des`. I made a .c file containing the decrypt function and the main running it.
+
+    gcc hugo.c
+    ./a.out -> gives a hash
+
+The given hash is the password for level14
