@@ -1,0 +1,2 @@
+By looking at the strings in the level07 binary, we see that it gets the env, and executes system() with /bin/echo. The binary writes level07 on stdout, so it was either the binary name or the username. By running with 
+`LOGNAME=\`getflag\` ./level07, the getflag command gets executed.
