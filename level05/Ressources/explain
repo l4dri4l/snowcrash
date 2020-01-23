@@ -1,0 +1,2 @@
+We are prompted that we have mail. By looking at the mail file located in /var/mail, we immediatly recognize a crontab line. at first we thought out crontab was involved but it was flag05's. it runs the script file openarenaserver in /usr/sbin/ that runs everything in /opt/openarenaserver. So we can put a script there that will be executed by flag05.
+`getflag > /tmp/flag`

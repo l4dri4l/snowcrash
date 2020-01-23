@@ -1,0 +1,3 @@
+we see by reading the /etc/passwd that flag01 has a encrypted password (with salt 42).
+We can scp the file to another machine and john --show ./passwd
+it shows the flag01 PWD : abcdefg
