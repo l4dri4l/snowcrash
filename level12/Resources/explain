@@ -1,0 +1,9 @@
+Same pattern as the 4th level here but with a more complex script.
+
+The perl script uses 2 sed commands to Uppercase the input and to keep only the first word.
+
+By knowing these rules we made this string : `/*/VIRUS` which gets trough both protections.
+File VIRUS is in scripts (getflag > /tmp/flag)
+
+By calling : http://snowcrash:4646/?x=`/*/VIRUS`
+The script is called and we get the flag in /tmp/flag file.

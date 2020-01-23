@@ -1,0 +1,13 @@
+After searching a few minutes we typed
+    `ls -lRa / 2>/dev/null | less`
+
+We found a text file named `john` in `/usr/sbin` (and in other directories but they are the same)
+
+`cat /usr/sbin/john` -> cdiiddwpgswtgt
+
+Tried with John, didn't work.
+Tried on www.dcode.fr/chiffre-cesar with option "try all" checked.
+
+In the list the string `nottoohardhere` clearly shows up.
+
+`su flag00`, using `nottoohardhere` as password unlocks us the first flag ;)

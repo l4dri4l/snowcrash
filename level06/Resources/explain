@@ -1,0 +1,16 @@
+Executing `level06` gives us an error, this error basically tells us that it runs level06.php (readable).
+
+level06.php uses `preg_replace`, we found that using this function with its /e modifier has a vulnerability.
+This enables us to execute some php !
+
+Reverse engineering the regex tells us to put our php code into a special pattern:
+[x code_here]
+
+To be able to execute code within quotes we use `{}` notation:
+[x {${shell_exec($z)}}]
+
+- Here we execute command given in the second argument ($z).
+
+We put our malicious code into `/tmp/virus`
+
+Finally by running `./level06 /tmp/virus getflag` we get our flag !

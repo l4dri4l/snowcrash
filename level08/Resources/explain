@@ -1,0 +1,22 @@
+First we execute level08 binary:
+
+    ./level08 [file to read]
+
+So we executed it with token as parameter :
+
+    You may not access 'token'
+
+Well... We noticed the sticky bit on the executable. We tried on different files and it worked.
+By using command `strings level08` and `nm level08` we saw `token` in clear and that `strstr` was used.
+
+So we thought that the program checks if the file is named `token`.
+
+We created a symlink to counter this :
+ln -s /home/user/level08/token /tmp/coucou
+
+And then
+./level08 /tmp/coucou
+
+gives us the content of token -> quif5eloekouj29ke0vouxean
+
+It's the password to login as flag08 !

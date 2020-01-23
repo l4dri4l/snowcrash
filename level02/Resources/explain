@@ -1,0 +1,14 @@
+First, to make things easier, we downloaded the .pcap file via `scp`.
+
+Then we openened it with Wireshark to analyse the file.
+
+By reading every paquet we noticed a `Password:` in one of them.
+Next paquets sent (and not received) contained a data field for every key pressed on the keyboard.
+
+It gives us this sequence :
+
+ft_wandr<<<NDRel<L0L
+
+< means hexadecimal 7F here, which is a carriage return. By applying then we get :
+
+ft_waNDReL0L, which is the password for flag02 user !
