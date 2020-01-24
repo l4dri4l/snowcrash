@@ -1,0 +1,3 @@
+we have a binary file and a token file. the token file contains a string that resembles a password but it doesn't work. When we run the binary file and give it AAAAAA as an argument, it outputs ABCDE. So we can assume that the string in the token file is the output of the binary when given the flag as argument. We wrote a very simple C program that does a progressive rot to get the original flag.
+`cat ./token | xargs /tmp/a.out | cat -e`
+We get f3iji1ju5yuevaus41q1afiuq which is the flag09 password.
